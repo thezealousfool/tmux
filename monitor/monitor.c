@@ -206,7 +206,7 @@ float cpu_io_p(cpuinfo *s) {
   return (s->iowait) / deno * 100;
 }
 
-float mem_p(meminfo *mem) { return (float)mem->used / mem->total; }
+float mem_p(meminfo *mem) { return (float)mem->used / mem->total * 100; }
 
 void bytes_to_readable(netinfo *n) {
   if (n->sent > 1000 * 1000) {
